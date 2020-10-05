@@ -1,4 +1,4 @@
-function Start(clicked_id){
+const Start = (clicked_id) => {
     
     clickedTable = document.getElementById(clicked_id);
     startTime = document.getElementById('start_time'+clicked_id);
@@ -88,7 +88,7 @@ tiempoTranscurrido4 = 0;
 tiempoTranscurrido5 = 0;
 tiempoTranscurrido6 = 0;
 
-function IniciarTiempo(tableIdInicio){
+const IniciarTiempo = (tableIdInicio) => {
     if(tableIdInicio == 1){
         tiempoInicio1 = tiempo;
     }
@@ -109,7 +109,7 @@ function IniciarTiempo(tableIdInicio){
     }
 }
 
-function CalcularTiempo(tableIdCalcular){
+const CalcularTiempo = (tableIdCalcular) => {
     if(tableIdCalcular == 1){
         tiempoTranscurrido1 = tiempo - tiempoInicio1;
     }
@@ -130,7 +130,7 @@ function CalcularTiempo(tableIdCalcular){
     }
 }
 
-function Timer(){
+const Timer = () => {
     momentoActual = new Date();
     hora = momentoActual.getHours();
     minuto = momentoActual.getMinutes();
